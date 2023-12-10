@@ -1,4 +1,4 @@
-package franciscoRafaelMenesesGoncalves.estoque;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
 
 import java.util.Date;
 

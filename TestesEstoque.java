@@ -1,4 +1,4 @@
-package franciscoRafaelMenesesGoncalves.estoque;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
 
 import static org.junit.Assert.*;
 
@@ -7,13 +7,15 @@ import java.util.Date;
 
 import org.junit.Test;
 
+import franciscoRafaelMenesesGoncalves.estoque.Estoque;
+import franciscoRafaelMenesesGoncalves.estoque.Fornecedor;
+import franciscoRafaelMenesesGoncalves.estoque.Produto;
+
 public class TestesEstoque {
 	
 	@Test
 	public void produtosAbaixoDoEstoqueMinimo() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
-		Fornecedor forn2 = new Fornecedor(19, "Ambev");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		Produto prod2 = new Produto(15, "Cerveja", 5, 1);
 		Produto prod3 = new Produto(18, "Cerveja Pilsen", 5, 1);
@@ -31,7 +33,6 @@ public class TestesEstoque {
 	@Test
 	public void compraItens() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 0.5);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 10, 4);
@@ -52,7 +53,6 @@ public class TestesEstoque {
 	@Test
 	public void compraQuantidadeNegativaDeItens() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, -10, 4);
@@ -62,7 +62,7 @@ public class TestesEstoque {
 	@Test
 	public void compraQuantidadeZeroDeItens() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 0, 4);
@@ -72,17 +72,18 @@ public class TestesEstoque {
 	@Test
 	public void compraItensComPrecoNegativo() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 10, -5);
 		assertEquals(0, estoque.quantidade(12));
 	}
 	
+	@SuppressWarnings("deprecation")
 	@Test
 	public void vendeItens() throws InterruptedException {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		Date d1 = new Date();
@@ -136,7 +137,7 @@ public class TestesEstoque {
 	@Test
 	public void quantidadeAposVendaProdutos() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 20, 5);
@@ -147,7 +148,7 @@ public class TestesEstoque {
 	@Test
 	public void vendeMesmaQuantidadeQueEstoque() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 20, 5);
@@ -160,7 +161,7 @@ public class TestesEstoque {
 	@Test
 	public void vendeQuantidadeNegativaDeItens() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 10, 4);
@@ -171,7 +172,7 @@ public class TestesEstoque {
 	@Test
 	public void vendeQuantidadeZeroDeItens() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 10, 4);
@@ -181,7 +182,7 @@ public class TestesEstoque {
 	@Test
 	public void vendeMaisItensQueEstoque() {
 		Estoque estoque = new Estoque();
-		Fornecedor forn1 = new Fornecedor(48, "Nestle");
+		//Fornecedor forn1 = new Fornecedor(48, "Nestle");
 		Produto prod1 = new Produto(12, "Sorvete", 5, 1);
 		estoque.incluir(prod1);
 		estoque.comprar(12, 10, 4);

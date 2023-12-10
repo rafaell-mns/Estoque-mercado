@@ -1,4 +1,4 @@
-package franciscoRafaelMenesesGoncalves.estoque;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,7 +17,7 @@ public class Produto {
 	public ArrayList<Movimentacao> getMovimentacoes() {
 	    return fluxo;
 	}
-
+	
 	public Produto(int cod, String desc, int min, double lucro) {
 		codigo = cod;
 		descricao = desc;
@@ -78,7 +78,9 @@ public class Produto {
 
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
-	}	
+	}
 
-	
+	public void setEstoqueMinimo(int estoqueMinimo) {
+		this.estoqueMinimo = estoqueMinimo;
+	}
 }
