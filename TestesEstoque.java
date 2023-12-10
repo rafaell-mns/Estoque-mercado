@@ -1,4 +1,4 @@
-package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivelExcecoes;
 
 import static org.junit.Assert.*;
 

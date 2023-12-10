@@ -1,10 +1,10 @@
-package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivelExcecoes;
 
 import java.util.Date;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws DadosInvalidos, ProdutoJaCadastrado, ProdutoInexistente, ProdutoNaoPerecivel, ProdutoVencido {
 		// TODO Auto-generated method stub
 		
 			Estoque estoque = new Estoque();
@@ -20,9 +20,9 @@ public class Main {
 			estoque.comprar(14, 4, 8, data2);
 			estoque.comprar(14, 10, 5, data1);
 			estoque.quantidade(14);
-			estoque.comprar(15, 11, 4.23, data1);
-			estoque.comprar(15, 5, 2.5, data2);
-			estoque.quantidade(15);
+			//estoque.comprar(15, 11, 4.23, data1);
+			//estoque.comprar(15, 5, 2.5, data2);
+			//estoque.quantidade(15);
 			System.out.println("Total antes da venda: " + ((ProdutoPerecivel) prod1).getQuantidade()); //14
 			
 			

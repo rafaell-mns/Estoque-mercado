@@ -1,4 +1,4 @@
-package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivel;
+package franciscoRafaelMenesesGoncalves.estoqueComProdutoPerecivelExcecoes;
 
 public class Fornecedor {
 	private int cnpj;
